@@ -8,12 +8,12 @@ function make2DArray(cols, rows) {
 let grid;
 let cols;
 let rows;
-let w = 20;
+let w = 30;
 
-let totalCovid = 30;
+let totalCovid = 50;
 
 function setup() {
-  createCanvas(401, 401);
+  createCanvas(901, 701);
   cols = floor(width / w);
   rows = floor(height / w);
   grid = make2DArray(cols, rows);
@@ -47,6 +47,7 @@ function setup() {
 }
 
 function gameOver() {
+  window.alert("Oh no! You got Covid :(");
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       grid[i][j].revealed = true;
@@ -70,6 +71,7 @@ function mousePressed() {
 
 function draw() {
   background(255);
+
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       grid[i][j].show();

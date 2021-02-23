@@ -70,8 +70,8 @@ function mousePressed() {
 }
 
 function draw() {
+  clear();
   background(255);
-
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       grid[i][j].show();

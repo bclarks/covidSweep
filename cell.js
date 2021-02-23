@@ -12,6 +12,7 @@ function cell(i, j, w) {
 
 cell.prototype.show = function () {
   stroke(0);
+  noFill();
   rect(this.x, this.y, this.w, this.w);
   if (this.revealed) {
     if (this.covid) {

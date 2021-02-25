@@ -10,7 +10,7 @@ let cols;
 let rows;
 let w = 30;
 
-let totalCovid = 50;
+let totalCovid = 65;
 
 function setup() {
   createCanvas(901, 701);

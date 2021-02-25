@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CovidSweep</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1>CovidSweep</h1>
+    <div> 
+      <h3>How to play</h3>
+      <ul>
+        <li>"Travel" around by clicking on squares</li>
+        <li>Avoid "covid" by not selecting infected squares</li>
+        <li>Try and complete the grid in the fastest time possible without getting sick</li>
+        <li>If you get sick, quarantine and try again</li>
+      </ul>
+    </div>
      <script src="constants.js"></script>
       <script src="game.js"></script>
       <script src="cell.js"></script>
       <button class="restart" onclick="location.reload()"> Quarantine and get Covid Free</button><br><br>
+
   </body>
 </html>

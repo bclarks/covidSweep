@@ -10,7 +10,13 @@ let cols;
 let rows;
 let w = 30;
 
+let yourSick;
+
 let totalCovid = 65;
+
+function preload() {
+  yourSick = loadSound("./Small-Double-Cough-3-www.fesliyanstudios.com.mp3");
+}
 
 function setup() {
   createCanvas(901, 701);
@@ -47,6 +53,7 @@ function setup() {
 }
 
 function gameOver() {
+  yourSick.play();
   window.alert("Oh no! You got Covid :(");
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {

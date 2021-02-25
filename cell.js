@@ -19,7 +19,7 @@ cell.prototype.show = function () {
       fill("lime");
       ellipse(this.x + this.w * 0.5, this.y + this.w * 0.5, this.w * 0.5);
     } else {
-      fill(200);
+      fill("blue");
       rect(this.x, this.y, this.w, this.w);
       if (this.neighborCount > 0) {
         textAlign(CENTER);
@@ -61,22 +61,5 @@ cell.prototype.reveal = function () {
   this.revealed = true;
   if (this.neighborCount == 0) {
     this.floodFill();
-  }
-};
-
-cell.prototype.floodFill = function () {
-  for (let xoff = -1; xoff <= 1; xoff++) {
-    let i = this.i + xoff;
-    if (i < 0 || i >= cols) continue;
-
-    for (let yoff = -1; yoff <= 1; yoff++) {
-      let j = this.j + yoff;
-      if (j < 0 || j >= rows) continue;
-
-      let neighbor = grid[i][j];
-      if (!neighbor.revealed) {
-        neighbor.reveal();
-      }
-    }
   }
 };

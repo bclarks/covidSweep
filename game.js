@@ -11,10 +11,12 @@ let rows;
 let w = 30;
 
 let yourSick;
+let bgImage;
 
 let totalCovid = 65;
 
 function preload() {
+  bgImage = loadImage("./unnamed.jpg");
   yourSick = loadSound("./Small-Double-Cough-3-www.fesliyanstudios.com.mp3");
 }
 
@@ -78,7 +80,7 @@ function mousePressed() {
 
 function draw() {
   clear();
-  background(255);
+  background(bgImage);
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       grid[i][j].show();
